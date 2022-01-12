@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    width:100%;
+    margin:0px;
+    min-width: 800px;
+    max-width: 2000px;
+    font-family:'Nunito', sans-serif !important;
+    overflow-y: hidden;
+}
+
+.Botones{
+    margin: 10 0 0 20;
+}
+
+.btn_reload_uno {
+    object-position: center !important;
+    margin: 10 10 10 10 !important;
+    border-radius: 100% !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-style: solid !important;
+    background-color: #3d286e !important;
+    border-color: #3d286e !important;
+}
+
+.btn_reload_uno:hover {
+    transition: all 0.5s !important;
+    background-color: rgb(153, 119, 216) !important;
+    border-color:rgb(153, 119, 216) !important;
+    transform: rotate(1turn) !important;
+}
+
+
+.btn_download_uno {
+    margin-left: 10px;
+    object-position: center !important;
+    margin: 10 10 10 10 !important;
+    border-radius: 100% !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-style: solid !important;
+    background-color: #1e7724 !important;
+    border-color: #1e7724 !important;
+}
+
+.btn_download_uno:hover {
+    transition: all 0.5s !important;
+    background-color: rgb(60, 175, 137) !important;
+    border-color:rgb(60, 175, 137) !important;
+    transform: scale(1.2) !important;
+}
+
+.icon-refresh {
+    font-weight: 200 !important;
+    color: white !important;
+    border-radius: 100% !important;
+    font-size: 35px !important;   
+}

@@ -1,0 +1,239 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./style/img/LogoCPA.png">
+    <!---ANIMACIONES--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!----BOOSTRAP--->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+    <!--- FONTS--->
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--- ESTILOS --->
+    <link rel="stylesheet" href="./style/style-index.css">
+    <title> Cabello Para El Alma</title>
+</head>
+<body>
+    <!--- INICIO DE SESIÓN --->
+    <section id="Login" class="Inicio-Sesion">
+        <div class="Contenido">
+            <div class="image-logo">
+                <img class="animate__animated animate__fadeIn animate__faster" src="./style/img/LogoCPA.png" alt="Logo Cabello Para el alma">
+            </div>
+            <div class="Inicio">
+                <h1>Bienvenid@ Enlace</h1>
+                <div class="Datos">
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <input type="password" name="password" id="password" placeholder="ID Usuario">
+                    <div class="Boton-Iniciar">
+                        <button onclick="login()">Iniciar Sesión</button>
+                    </div>
+                </div>
+                <div></div>
+                <h2>- Un espacio para ti -</h2>
+            </div>
+        </div>
+    </section>
+    <!---USER VIST--->
+    <section class="User animate__animated animate__fadeIn animate__slower" id="User">
+        <!---NavBar--->
+        <section class="NAVBAR-OF">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                        <a class="navbar-brand">
+                        <img src="./style/img/LogoCPA.png" alt="" width="30" class="d-inline-block align-text-top"> Region 4</a>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="pills-inicio-tab" data-bs-toggle="pill" data-bs-target="#pills-inicio" type="button" role="tab" aria-controls="pills-inicio" aria-selected="true">Inicio <span class="badge bg-success">NEW</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-DataBase-tab" data-bs-toggle="pill" data-bs-target="#pills-DataBase" type="button" role="tab" aria-controls="pills-DataBase" aria-selected="false">Base de datos</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link disabled" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Disabled <span class="badge bg-danger">IN PROCESS</span></button>
+                            </li>
+                          </ul>
+                        <button class="btn btn-outline-danger" onclick="logout()">Cerrar Sesion</button>
+                </div>
+              </nav>
+        </section>
+    <!---- NavBar Vist ---->
+    <section class="NavBar-Vist">
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-inicio" role="tabpanel" aria-labelledby="pills-inicio-tab">
+                <div class="Inicio-NAVBAR">
+                        <center class="Inicio-NAVBAR-CONT" style="background: rgb(255,122,241);
+                        background: linear-gradient(90deg, rgba(255,122,241,1) 0%, rgba(201,50,213,1) 37%, rgba(0,212,255,1) 100%);">
+                            <img style=" margin-top: 0px; padding-top: 50px; position:relative; width: 350px;" src="./style/img/LogoCPA.png" alt="">
+                            <h1 style="font-family: 'Birthstone Bounce', cursive;color: white; font-size: 80px; padding-top: 20px; font-weight: 900; ">#DondeLaMagiaSucede</h1>
+                            <svg style="width: 100%; height: 150px;" class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                            <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                            </g>
+                            </svg>
+                        </center>
+                        <div class="Inicio-NAVBAR-Content">
+                            <h1>- Hola Enlace -</h1>
+                        </div>
+                        <!---- DESCRIPCION ---->
+                        <div class="Acordion-Desc">
+                            <div class="Section_Inicio_Sub">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          ¿Qué es esto? 🤔  <span class="badge bg-success">Nuevo</span>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                          <strong>Bienvenida a la pagina web de Cabello Para el Alma R4 (NO OFICIAL).</strong> Aquí podras encontrar varias herramientas que te seran de utilidad durante tu coordinación municipal en <strong>Cabello para el Alma</strong>, una de las principales herramientas que tendras a tu disposición es la sección <strong>BASES DE DATOS</strong>, como podras suponer aquí se encontraran todas las bases de datos disponibles en la asociación para que las llenes
+                                          y así evitaremos tener muchos documentos de excel en nuestros discos duros, ahorrando espacio y tiempo.
+                                          <br>
+                                          A manera de recomendación y para una mejor experiencia te mencionamos que es mejor utilizar la plataforma en una <strong>Computadora</strong>, aunque la funcionalidad de la plataforma no se vera afectada de ninguna manera, la sección estetica (imagenes, textos, secciones, etc.) si estara afectada notandose imagenes muy grandes, textos cortados por la mitad entre otros errores visuales.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          ¿Quienes tienen acceso a esta plataforma? 🤨 <span class="badge bg-success">Nuevo</span>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                          <strong>Solo enlaces municipales, coordinador regional y administrativos de Cabello para el Alma.</strong> El uso de la plataforma esta limitado para que solo ustedes puedan entrar, tanto es así que para acceder a las bases de datos y su contenido se necesita anteriormente haber iniciado sesión con un correo electronico y ID de Usuario autorizado por el coordiandor regional, de no contar con estos datos o no haber sido autorizado no podras acceder a las bases de datos lo cual sí es 
+                                          una ventaja para mantener la seguridad de la asociación, por lo que te pedimos que no compartas tu correo y contraseña con nadie.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                          <strong>¡NOTA DE ACTUALIZACIÓN! </strong> 😎<span class="badge bg-success">Nuevo</span>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                          <strong style="color: red;">¡Cambios importantes!</strong> Con motivo de seguir mejorando la plataforma se han realizado algunos cambios.
+                                          <br>
+                                          <br>
+                                          <dl>
+                                              <dt><strong>Generales</strong></dt>
+                                              <li>
+                                                  Se removieron la secciones de "Eventos" y "Archivos" ya que se piensa dar una mejora funcional y estetica a las secciones antes mencionadas.
+                                              </li>
+                                              <li>
+                                                  Se agregaron etiquetas de distintos colores que ayudaran a identificar errores que encuentres y la versión del apartado en donde esta dicho error para que se pueda corregir, porfavor apoyanos reportando todos los errores
+                                                  que encuentres al siguiente <a href="mailto:r4cabelloparaelalma@gmail.com">E-mail</a> ó <a href="https://wa.me/524613131326">Whatsapp</a> agregando una captura y descripción del error.
+                                              </li>
+                                              <li>
+                                                  Se agregaron animaciones en pequeñas partes de la plataforma para hacerla mas agradable a la vista, estas animaciones no afectan a la funcionalidad de ningun apartado.
+                                              </li>
+                                              <br>
+                                              <dt><strong>Inicio de sesión</strong></dt>
+                                              <dd> Anteriormente se contaba con un inicio de sesión muy poco visual y con pocas funcionalidades seguiremos mejorando este apartado por lo que esperen pronto una nueva modificación.</dd>
+                                                  <li>
+                                                      Se mejoro, haciendolo mas estetico y agradable a la vista.
+                                                  </li>
+                                                  <li>
+                                                      Las funcionalidades visuales se mejoraron y agregaron algunas extras a esta seccción.
+                                                  </li>
+                                                  <br>
+                                                <dt><strong>Inicio</strong></dt>
+                                                <dd>Anteriormente se contaba con un inicio con funcionalidades nulas, es decir esta sección donde estas leyendo este texto no existia y nisquiera estaba dentro de las ideas incluirla. </dd>
+                                                <li>
+                                                    Como habras notado se agrego esta sección, es un paso inicial por lo que mas adelante esta sección se mejorara y agregaran mas cosas.
+                                                </li>
+                                                <br>
+                                                <dt><strong>Bases de datos</strong></dt>
+                                                <dd>Los datos introducios por los enlaces en los registros puede que se vean afectados al hacer una edición lo que ocaciona volver a llenar los espacios con <strong>NaN</strong>.</dd>
+                                                <li>
+                                                    La funcionalidad de esta sección sigue siendo totalmente igual a la versión aterior presentada, pero se planea una mejora visual y funcional, haciendo mas facil comprender las bases de datos que se 
+                                                    manejan aquí. 
+                                                </li>
+                                                <li>
+                                                  La base de datos <strong>trenzas</strong>, cuenta con una actualización manual en el <strong>TOTAL</strong> que cualquier usuario puede utilizar, anterior mente solo el desarollador podia realizar actualizaciones del total, en un futuro se planea que esto sea automatico. 
+                                              </li>
+                                              <li>
+                                                  La base de datos <strong>Pulseras</strong> pasa a una version 2.0, se agrego la opción de descargar los comprobantes de los municipios que ya realizaron sus depositos.
+                                              </li>
+                                          </dl>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-DataBase" role="tabpanel" aria-labelledby="pills-DataBase-tab">
+                <div class="NavBar-Database">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="centros-tab" data-bs-toggle="tab" data-bs-target="#centros" type="button" role="tab" aria-controls="centros" aria-selected="true">Centros</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="Pulseras-tab" data-bs-toggle="tab" data-bs-target="#Pulseras" type="button" role="tab" aria-controls="Pulseras" aria-selected="false">Pulseras</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="Trenzas-tab" data-bs-toggle="tab" data-bs-target="#Trenzas" type="button" role="tab" aria-controls="Trenzas" aria-selected="false">Trenzas</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="centros" role="tabpanel" aria-labelledby="centros-tab">
+                            <div class="DataBase-Centros">
+                                <iframe src="./DataBase/Centros_Acopio/Base.html" frameborder="0"></iframe>
+                              </div>
+                        </div>
+                        <div class="tab-pane fade" id="Pulseras" role="tabpanel" aria-labelledby="Pulseras-tab">
+                          <div>
+                            <iframe src="./DataBase/Pulseras/" frameborder="0"></iframe>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="Trenzas" role="tabpanel" aria-labelledby="Trenzas-tab">
+                          <div class="DataBase-Trenzas">
+                            <iframe src="./DataBase/Trenzas/Base.html" frameborder="0"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+          </div>
+    </section>
+    </section>
+
+</body>
+
+
+ <!--- FIREBASE --->
+ <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+ <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyC5FKpezxJKDMJx78lPzsn-uUs3kSQYw3A",
+    authDomain: "cabello-para-el-alma.firebaseapp.com",
+    databaseURL: "https://cabello-para-el-alma-default-rtdb.firebaseio.com",
+    projectId: "cabello-para-el-alma",
+    storageBucket: "cabello-para-el-alma.appspot.com",
+    messagingSenderId: "789533339991",
+    appId: "1:789533339991:web:ac16344d48d2764927ce12"
+   };
+   firebase.initializeApp(config);
+ </script>
+ <script src="JavaScript/index.js"></script>
+</html>

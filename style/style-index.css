@@ -1,0 +1,380 @@
+body{
+    margin: auto;
+    max-width: 100%;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Inicio de sesión */
+.Inicio-Sesion{
+    background-image: url(./img/Fondo_CPA.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.Contenido {
+    align-items: center;
+    display: flex;
+    margin: auto;
+    background-color: #ffffff;
+    width: 600px;
+    height: 350px;
+    border-radius: 60px;
+    box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.13);
+}
+
+.Contenido > .image-logo > img {
+    width: 200px;
+    margin: auto;
+    padding: 0px;
+    margin: 20px;
+}
+
+.Contenido > .Inicio {
+    padding: 20px;
+    border-left:solid #000000;
+}
+
+.Contenido > .Inicio > h1 {
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Contenido > .Inicio > h2 {
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight:inherit;
+    color: rgba(51, 51, 51, 0.644);
+}
+
+.Contenido > .Inicio > .Datos {
+    text-align: center;
+    margin: 25px;
+}
+
+.Contenido > .Inicio > .Datos > input {
+    margin: 5px;
+    width: 200px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 1.5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Contenido > .Inicio > .Datos > input:hover {
+    margin: 5px;
+    width: 200px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+
+.Contenido > .Inicio > .Datos >.Boton-Iniciar > button {
+    align-items: center;
+    margin: 20px;
+    width: 150px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: #bd238e;
+    border-width: 1.5px;
+    padding: 5px;
+    font-size: 15px;
+    background-color: #bd238e;
+    color: white;
+}
+
+.Contenido > .Inicio > .Datos > .Boton-Iniciar > button:hover {
+    margin: 20px;
+    border-radius: 30px;
+    transform: scale(1.2);
+    background-color: rgb(96, 34, 168);
+    border-color:rgb(96, 34, 168);
+}
+
+
+
+/* USER VIST */
+
+
+/* NAVBAR */
+.NavBar-Vist {
+    
+}
+
+.nav-link {
+    color: #000000;
+}
+
+/* NAVBAR VIST */
+.Inicio-NAVBAR {
+    margin: 35 0 0 0;
+}
+
+.Inicio-NAVBAR-Content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.Inicio-NAVBAR-Content > h1 {
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+.Acordion-Desc {
+    align-items: center;
+    margin: 0 20% 0 20%;
+}
+
+.Acordion-Desc > .Acordion-Desc-Que {
+    text-align: justify !important;
+}
+
+.NavBar-Database {
+    margin: 0 10 0 10;
+    margin-top: 95px;
+}
+
+.DataBase-Centros > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.DataBase-Trenzas > iframe {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 400px) {
+
+    body{
+        margin: auto;
+        max-width: 400px;
+        font-family: 'Nunito', sans-serif;
+        overflow-x: hidden;
+        
+    }
+    
+    /* Inicio de sesión */
+    .Inicio-Sesion{
+        background-image: url(./img/Fondo_CPA.png);
+        background-size: cover;
+        width: 375px;
+        height: 100%;
+        max-width: 375px;
+    }
+    
+    .Contenido {
+        align-items: center;
+        display: flex;
+        margin: auto;
+        background-color: #ffffff;
+        width: 350px;
+        height: 240px;
+        border-radius: 60px;
+        box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.13);
+    }
+    
+    .Contenido > .image-logo > img {
+        width: 150px;
+        margin: auto;
+        padding: 0px;
+    }
+    
+    .Contenido > .Inicio {
+        padding: 5px;
+        border-left:solid #000000;
+    }
+    
+    .Contenido > .Inicio > h1 {
+        margin: auto;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .Contenido > .Inicio > h2 {
+        margin: auto;
+        text-align: center;
+        font-size: 10px;
+        font-weight:inherit;
+        color: rgba(51, 51, 51, 0.644);
+    }
+    
+    .Contenido > .Inicio > .Datos {
+        text-align: center;
+        margin: 5px;
+    }
+    
+    .Contenido > .Inicio > .Datos > input {
+        margin: 5px;
+        width: 80px;
+        border-radius: 50px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        border-width: 1.5px;
+        padding: 5px;
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    .Contenido > .Inicio > .Datos > input:hover {
+        margin: 5px;
+        width: 90px;
+        border-radius: 50px;
+        padding: 5px;
+    }
+    
+    
+    .Contenido > .Inicio > .Datos >.Boton-Iniciar > button {
+        align-items: center;
+        margin: 20px;
+        width: 100px;
+        border-radius: 50px;
+        border-style: solid;
+        border-color: #bd238e;
+        border-width: 1.5px;
+        padding: 5px;
+        font-size: 10px;
+        background-color: #bd238e;
+        color: white;
+    }
+    
+    .Contenido > .Inicio > .Datos > .Boton-Iniciar > button:hover {
+        margin: 20px;
+        border-radius: 30px;
+        transform: scale(1.2);
+        background-color: rgb(96, 34, 168);
+        border-color:rgb(96, 34, 168);
+    }
+    
+    
+    
+    /* USER VIST */
+    
+    
+    /* NAVBAR */
+    .Inicio-NAVBAR-Cont {
+        margin-top: 50px;
+        text-align: center;
+    }
+    
+    /* NAVBAR VIST */
+    .Inicio-NAVBAR {
+        margin: 35 0 0 0;
+    }
+    
+    .Inicio-NAVBAR-Content {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .Inicio-NAVBAR-Content > h1 {
+        margin: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .Acordion-Desc {
+        align-items: center;
+        margin: 0 20% 0 20%;
+    }
+    
+    .Acordion-Desc > .Acordion-Desc-Que {
+        text-align: justify !important;
+    }
+    
+    .NavBar-Database {
+        margin: 30 10 10 10;
+        margin-top: 95px;
+        width: 350px;
+        font-size: 11px;
+        height: 100%;
+    }
+    
+    .DataBase-Centros {
+        margin-top: 10px;
+        height: 100%;
+    }
+
+    .DataBase-Centros > iframe {
+        margin-top: 10px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .User{
+        max-width: 375px;
+        overflow-x: hidden;
+    }
+
+    .Inicio-NAVBAR > .Inicio-NAVBAR-CONT > img {
+        width: 200px !important;
+    }
+
+    .Inicio-NAVBAR > .Inicio-NAVBAR-CONT > h1 {
+        font-size: 40px !important;
+    }
+
+    .Inicio-NAVBAR > .Inicio-NAVBAR-CONT > svg {
+       height: 90px !important;
+    }
+
+    .Inicio-NAVBAR-Content > h1 {
+        font-size: 20px;
+    }
+
+    .accordion-button {
+        font-size: 12px;
+    }
+
+    .accordion-body {
+        font-size: 10px;
+    }
+
+    .User > .NAVBAR-OF > nav {
+        height: 90px;
+        width: 375px;
+        flex-wrap: nowrap !important;
+
+    }
+    
+    .nav-pills {
+        flex-wrap: nowrap !important;
+    }
+
+    .User .container-fluid{
+        display: flex;
+        justify-content: flex-start;
+        align-content: stretch;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .navbar-brand {
+        margin-top: 10px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-brand > img{
+        width: 30px;
+    }
+    
+    .User .NAVBAR-OF {
+        font-size: 10px;
+        
+    }
+    
+    .container-fluid > button {
+        width: 60px;
+        height: 50px;
+        font-size: 10px;
+    }
+  } 
