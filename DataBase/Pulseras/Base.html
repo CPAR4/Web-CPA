@@ -1,0 +1,164 @@
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="Content/LogoCPA.png"/>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <!--- TIPOGRAFIAS --->
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <title>Centros de Acopio | R4</title>
+    <link rel="stylesheet" href="./New.css">
+    <!---UKIT--->
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.2/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.2/dist/js/uikit-icons.min.js"></script>
+
+    <!---SCRIP DATA BASE--->
+    <script src="JavaScript/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.14.2/dist/sweetalert2.all.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase.js"></script>
+
+    <!-- datatables -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    </script>
+
+     <script type="text/javascript" src="app.js"></script>
+
+</head>
+<body>
+    <!--- BOTONES --->
+    <section class="Botones">
+        <div class="btn_agregar">
+        <button id="btnNuevo" class="btn_agregar_uno"><span class="icon-add material-icons">add </span></a></button>
+        </div>
+        <div class="btn_reload">
+            <button class="btn_reload_uno" onclick="location.reload()" ><span class="icon-refresh material-icons">refresh</span></button>
+        </div>
+    </section>
+    <!----MODAL---->
+    <section>
+        <div style="margin-left: 50px;"  class="modal fade" id="modalAltaEdicion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div style="border-radius: 30px;"  class="modal-content">
+                    <div class="modal-header bg-primary text-light" >
+                        <h5  class="modal-title" id="exampleModalLabel">Alta / Edición</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form>
+                        <div style="background-color: #f2f2f2;" class="modal-body">
+                            <input id="id" type="hidden"> <!-- ID que vamos a recibir de firebase -->
+                            <div class="form-group">                                    
+                            <label>Enlace</label>
+                            <select id="Nombre" type="text" class="form-control" required>
+                            <option>Alexandra García Pérez</option>
+                            <option>Claudia Vanessa Vazquez Hernndez</option>
+                            <option>Lizeth Margarita Navarrete Nuñez</option>
+                            <option>Itzayana Pineda Zamudio</option>
+                            <option>Quetzalli Alcantar Cruz</option>
+                            <option>Karen Daniela García García</option>
+                            </select>
+                            </div>    
+                            <div class="form-group">
+                            <label>Municipio</label>
+                            <select id="Municipio" type="text" class="form-control" required>
+                            <option>Acambaro</option>
+                            <option>Apaseo el Alto</option>
+                            <option>Coroneo</option>
+                            <option>Jerecuaro</option>
+                            <option>Tarandacuao</option>
+                            <option>Tarimoro</option>    
+                            </select>
+                            </div>
+                            <div class="form-group">
+                            <label>Pulseras solicitadas</label>
+                            <input id="Pulceras_Sol" type="number" class="form-control" required>
+                            </div> 
+                            <div class="form-group">
+                            <label>Pulseras vendidas</label>
+                            <input id="Pulceras_Ven" type="number" class="form-control">
+                            </div>
+                            <div class="form-group">
+                            <label>Fecha de entrega</label>
+                            <input id="Fecha_Ent" type="date" class="form-control" required>
+                            </div>  
+                            <div class="form-group">
+                            <label>Fecha de deposito</label>
+                            <input name="Dep" id="Fecha_Dep" type="date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                            <label>Periodo</label>
+                            <input id="Periodo" type="text" class="form-control" required>
+                            </div> 
+                            <div class="form-group">
+                            <label>Deposito Realizado</label>
+                            <select id="Seleccion" class="form-control" required>
+                            <option>Sí</option>
+                            <option>No</option>
+                            </select>
+                            </div>
+                            <div class="form-group">
+                            <label>Notas</label>
+                            <input id="Notas" type="text" class="form-control" required>
+                            </div>
+                           <!-- <div class="form-group">
+                            <label>Comprobante</label>
+                            <input id="Comprobante" type="url" class="form-control" required>
+                            </div> -->                                       
+                            </div>
+                            <section class="modal-footer">
+                        <div class="edit">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal" tabindex="2">Cancelar</button>
+                            <button class="btn btn-primary" type="submit" value="btnGuardar" translate="1">Guardar</button>
+                        </div>
+                    </section>
+                    </form>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--- BASE DE DATOS --->
+    <section class="Base_Datos">
+        <center>
+        <table id="TablaPulseras" class="table table-striped table-bordered" style=" margin:0;">
+            <thead style="text-align: center !important;" class="text-center">
+                    <tr>
+                        <th>ID</th>                        
+                        <th>Enlace</th>
+                        <th>Municipio</th>
+                        <th>Pulseras solicitadas</th>
+                        <th>Pulseras vendidas</th>
+                        <th>Fecha de entrega</th>
+                        <th>Fecha de deposito</th>
+                        <th>Periodo</th>
+                        <th>Deposito realizado</th>    
+                        <th>Notas</th>
+                       <!--- <th>Comprobante</th>  --->                                                            
+                        <th style= "color:#ff0000;">Acciones <svg style="position: absolute; margin:5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-diamond" viewBox="0 0 16 16">
+                            <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
+                            <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                          </svg></th>
+                    </tr>
+                </thead>
+                <tbody class="Table_Body">                   
+                </tbody>   
+            </table>
+        </center>
+    </section>
+</body>
+</html>

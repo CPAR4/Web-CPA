@@ -39,11 +39,11 @@ $(document).ready(function() {
             });
 
     Pulseras.on("child_added", datos => {        
-        dataSet = [datos.key, datos.child("nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val()];
+    dataSet = [datos.key, datos.child("nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante") */];
         table.rows.add([dataSet]).draw();
     });
     Pulseras.on('child_changed', datos => {           
-        dataSet = [datos.key, datos.child("nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val()];
+        dataSet = [datos.key, datos.child("nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante") */];
         table.row(filaEditada).data(dataSet).draw();
     });
     Pulseras.on("child_removed", function() {
@@ -61,12 +61,13 @@ $(document).ready(function() {
         let Fecha_Dep = $.trim($('#Fecha_Dep').val()); 
         let Periodo = $.trim($('#Periodo').val()); 
         let Seleccion = $.trim($('#Seleccion').val());
-        let Notas = $.trim($('#Notas').val());                                                            
+        let Notas = $.trim($('#Notas').val());
+       /* let Comprobante = $.trim($('#Comprobante').val()); */                                                         
         let idFirebase = id;        
         if (idFirebase == ''){                      
             idFirebase = Pulseras.push().key;
         };                
-        data = {nombre:nombre, Municipio:Municipio, Pulceras_Sol:Pulceras_Sol, Pulceras_Ven:Pulceras_Ven, Fecha_Ent:Fecha_Ent, Fecha_Dep:Fecha_Dep,Periodo:Periodo, Seleccion:Seleccion, Notas:Notas};             
+        data = {nombre:nombre, Municipio:Municipio, Pulceras_Sol:Pulceras_Sol, Pulceras_Ven:Pulceras_Ven, Fecha_Ent:Fecha_Ent, Fecha_Dep:Fecha_Dep,Periodo:Periodo, Seleccion:Seleccion, Notas:Notas, /* Comprobante:Comprobante */ };             
         actualizacionData = {};
         actualizacionData[`/${idFirebase}`] = data;
         Pulseras.update(actualizacionData);
@@ -86,7 +87,8 @@ $(document).ready(function() {
         $('#Fecha_Dep').val('');
         $('#Periodo').val('');
         $('#Seleccion').val('');    
-        $('#Notas').val('');                 
+        $('#Notas').val('');
+       /* $('#Comprobante').val(''); */              
         $("form").trigger("reset");
         $('#modalAltaEdicion').modal('show');
     });        
@@ -103,7 +105,8 @@ $(document).ready(function() {
         let Fecha_Ent = parseInt($(this).closest('tr').find('td:eq(4)').text());
         let Fecha_Dep = parseInt($(this).closest('tr').find('td:eq(5)').text()); 
         let Seleccion = parseInt($(this).closest('tr').find('td:eq(7)').text());
-        let Notas = parseInt($(this).closest('tr').find('td:eq(7)').text());             
+        let Notas = parseInt($(this).closest('tr').find('td:eq(8)').text());
+       /* let Comprobante = parseInt($(this).closest('tr').find('td:eq(9)').text()); */          
         $('#id').val(id);        
         $('#nombre').val(nombre);
         $('#Municipio').val(Municipio);                
@@ -113,7 +116,8 @@ $(document).ready(function() {
         $('#Fecha_Dep').val(Fecha_Dep);
         $('#Periodo').val("Enero - Octubre - 2021");
         $('#Seleccion').val(Seleccion);
-        $('#Seleccion').val(Notas);                         
+        $('#Notas').val(Notas);
+       /* $('#Comprobante').val(Comprobante); */                          
         $('#modalAltaEdicion').modal('show');
 	});  
   
