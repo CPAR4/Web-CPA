@@ -43,9 +43,9 @@
 <body>
     <!--- BOTONES --->
     <section class="Botones">
-        <div class="btn_agregar">
+       <!--- <div class="btn_agregar">
         <button id="btnNuevo" class="btn_agregar_uno"><span class="icon-add material-icons">add </span></a></button>
-        </div>
+        </div> -->
         <div class="btn_reload">
             <button class="btn_reload_uno" onclick="location.reload()" ><span class="icon-refresh material-icons">refresh</span></button>
         </div>
@@ -67,7 +67,7 @@
                             <label>Enlace</label>
                             <select id="Nombre" type="text" class="form-control" required>
                             <option>Alexandra García Pérez</option>
-                            <option>Claudia Vanessa Vazquez Hernndez</option>
+                            <option>Claudia Vanessa Vazquez Hernandez</option>
                             <option>Lizeth Margarita Navarrete Nuñez</option>
                             <option>Itzayana Pineda Zamudio</option>
                             <option>Quetzalli Alcantar Cruz</option>
@@ -103,7 +103,10 @@
                             </div>
                             <div class="form-group">
                             <label>Periodo</label>
-                            <input id="Periodo" type="text" class="form-control" required>
+                            <select id="Periodo" type="text" class="form-control" required>
+                                <option>ENERO 2021 - OCTUBRE 2021</option>
+                                <option>ENERO 2022 - OCTUBRE 2022</option>
+                            </select>
                             </div> 
                             <div class="form-group">
                             <label>Deposito Realizado</label>
@@ -114,7 +117,7 @@
                             </div>
                             <div class="form-group">
                             <label>Notas</label>
-                            <input id="Notas" type="text" class="form-control" required>
+                            <input id="Notas" type="text" class="form-control">
                             </div>
                            <!-- <div class="form-group">
                             <label>Comprobante</label>
