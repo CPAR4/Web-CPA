@@ -39,11 +39,11 @@ $(document).ready(function() {
             });
 
     Pulseras.on("child_added", datos => {        
-    dataSet = [datos.key, datos.child("nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante") */];
+    dataSet = [datos.key, datos.child("Nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante") */];
         table.rows.add([dataSet]).draw();
     });
     Pulseras.on('child_changed', datos => {           
-        dataSet = [datos.key, datos.child("nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante") */];
+        dataSet = [datos.key, datos.child("Nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante") */];
         table.row(filaEditada).data(dataSet).draw();
     });
     Pulseras.on("child_removed", function() {
@@ -53,7 +53,7 @@ $(document).ready(function() {
     $('form').submit(function(e){                         
         e.preventDefault();
         let id = $.trim($('#id').val());        
-        let nombre = $.trim($('#nombre').val());
+        let Nombre = $.trim($('#Nombre').val());
         let Municipio = $.trim($('#Municipio').val());         
         let Pulceras_Sol = $.trim($('#Pulceras_Sol').val());
         let Pulceras_Ven = $.trim($('#Pulceras_Ven').val());
@@ -67,7 +67,7 @@ $(document).ready(function() {
         if (idFirebase == ''){                      
             idFirebase = Pulseras.push().key;
         };                
-        data = {nombre:nombre, Municipio:Municipio, Pulceras_Sol:Pulceras_Sol, Pulceras_Ven:Pulceras_Ven, Fecha_Ent:Fecha_Ent, Fecha_Dep:Fecha_Dep,Periodo:Periodo, Seleccion:Seleccion, Notas:Notas, /* Comprobante:Comprobante */ };             
+        data = {Nombre:Nombre, Municipio:Municipio, Pulceras_Sol:Pulceras_Sol, Pulceras_Ven:Pulceras_Ven, Fecha_Ent:Fecha_Ent, Fecha_Dep:Fecha_Dep,Periodo:Periodo, Seleccion:Seleccion, Notas:Notas, /* Comprobante:Comprobante */ };             
         actualizacionData = {};
         actualizacionData[`/${idFirebase}`] = data;
         Pulseras.update(actualizacionData);
@@ -79,7 +79,7 @@ $(document).ready(function() {
     //Botones
     $('#btnNuevo').click(function() {
         $('#id').val('');        
-        $('#nombre').val('');
+        $('#Nombre').val('');
         $('#Municipio').val('');         
         $('#Pulceras_Sol').val('');
         $('#Pulceras_Ven').val('');
@@ -98,17 +98,17 @@ $(document).ready(function() {
         let fila = $('#TablaPulseras').dataTable().fnGetData($(this).closest('tr'));               
         let id = fila[0];
         console.log(id);
-		let nombre = $(this).closest('tr').find('td:eq(0)').text(); 
+		let Nombre = $(this).closest('tr').find('td:eq(0)').text(); 
         let Municipio = $(this).closest('tr').find('td:eq(1)').text();        
-        let Pulceras_Sol = parseInt($(this).closest('tr').find('td:eq(2)').text());
-        let Pulceras_Ven = parseInt($(this).closest('tr').find('td:eq(3)').text());
-        let Fecha_Ent = parseInt($(this).closest('tr').find('td:eq(4)').text());
-        let Fecha_Dep = parseInt($(this).closest('tr').find('td:eq(5)').text()); 
-        let Seleccion = parseInt($(this).closest('tr').find('td:eq(7)').text());
-        let Notas = parseInt($(this).closest('tr').find('td:eq(8)').text());
+        let Pulceras_Sol = $(this).closest('tr').find('td:eq(2)').text();
+        let Pulceras_Ven = $(this).closest('tr').find('td:eq(3)').text();
+        let Fecha_Ent = $(this).closest('tr').find('td:eq(4)').text();
+        let Fecha_Dep = $(this).closest('tr').find('td:eq(5)').text(); 
+        let Seleccion = $(this).closest('tr').find('td:eq(7)').text();
+        let Notas = $(this).closest('tr').find('td:eq(8)').text();
        /* let Comprobante = parseInt($(this).closest('tr').find('td:eq(9)').text()); */          
         $('#id').val(id);        
-        $('#nombre').val(nombre);
+        $('#Nombre').val(Nombre);
         $('#Municipio').val(Municipio);                
         $('#Pulceras_Sol').val(Pulceras_Sol);
         $('#Pulceras_Ven').val(Pulceras_Ven);

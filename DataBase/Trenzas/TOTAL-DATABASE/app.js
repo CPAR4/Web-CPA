@@ -78,7 +78,7 @@ $(document).ready(function() {
         let fila = $('#Total').dataTable().fnGetData($(this).closest('tr'));               
         let id = fila[0];
         console.log(id);
-		let TOTAL = $(this).closest('tr').find('td:eq(1)').text();               
+		let TOTAL = $(this).closest('tr').find('td:eq(0)').text();               
         $('#id').val(id);        
         $('#TOTAL').val(TOTAL);                        
         $('#modalAltaEdicion').modal('show');

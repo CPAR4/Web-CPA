@@ -96,12 +96,12 @@ $(document).ready(function() {
         console.log(id);
 		let Estatus = $(this).closest('tr').find('td:eq(0)').text(); 
         let Idper = $(this).closest('tr').find('td:eq(1)').text();        
-        let NombreCo = parseInt($(this).closest('tr').find('td:eq(2)').text());
-        let CURP = parseInt($(this).closest('tr').find('td:eq(3)').text());
-        let Municipio = parseInt($(this).closest('tr').find('td:eq(4)').text());
-        let Domicilio = parseInt($(this).closest('tr').find('td:eq(5)').text()); 
-        let Telefono = parseInt($(this).closest('tr').find('td:eq(6)').text());
-        let Email = parseInt($(this).closest('tr').find('td:eq(7)').text());                        
+        let NombreCo = $(this).closest('tr').find('td:eq(2)').text();
+        let CURP = $(this).closest('tr').find('td:eq(3)').text();
+        let Municipio = $(this).closest('tr').find('td:eq(4)').text();
+        let Domicilio = $(this).closest('tr').find('td:eq(5)').text(); 
+        let Telefono = $(this).closest('tr').find('td:eq(6)').text();
+        let Email = $(this).closest('tr').find('td:eq(7)').text();                        
         $('#id').val(id);        
         $('#Estatus').val(Estatus);
         $('#Idper').val(Idper);                

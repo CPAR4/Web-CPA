@@ -94,11 +94,11 @@ $(document).ready(function() {
         console.log(id);
 		let nombre = $(this).closest('tr').find('td:eq(0)').text(); 
         let direccion = $(this).closest('tr').find('td:eq(1)').text();        
-        let telefono = parseInt($(this).closest('tr').find('td:eq(2)').text());
-        let encargado = parseInt($(this).closest('tr').find('td:eq(3)').text());
-        let negocio = parseInt($(this).closest('tr').find('td:eq(4)').text());
-        let enlace = parseInt($(this).closest('tr').find('td:eq(5)').text()); 
-        let idn = parseInt($(this).closest('tr').find('td:eq(6)').text());            
+        let telefono = $(this).closest('tr').find('td:eq(2)').text();
+        let encargado = $(this).closest('tr').find('td:eq(3)').text();
+        let negocio = $(this).closest('tr').find('td:eq(4)').text();
+        let enlace = $(this).closest('tr').find('td:eq(5)').text(); 
+        let idn = $(this).closest('tr').find('td:eq(6)').text();            
         $('#id').val(id);        
         $('#nombre').val(nombre);
         $('#direccion').val(direccion);                
