@@ -1,4 +1,4 @@
-firebase.auth().onAuthStateChanged(function(user) {
+ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
   
@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   
       var user = firebase.auth().currentUser;
   
-      if(user != null){
+      if(user != null ){
   
         var email_id = user.email;
         document.getElementById("user_para").innerHTML = "Hola : " + email_id;
@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   
     }
   });
-  
+
   function login(){
   
     var userEmail = document.getElementById("email").value;
