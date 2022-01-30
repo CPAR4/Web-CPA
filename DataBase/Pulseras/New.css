@@ -175,6 +175,11 @@ body {
     border-color: rgb(112, 41, 114);
 }
 
+/* MODAL COMPROBANTES */
+.comprobantes-body {
+    text-align: center;
+}
+
 @media screen and (max-width: 400px)  {
     body {
         margin: 0;

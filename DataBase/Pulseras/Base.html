@@ -72,6 +72,7 @@
                             <option value="Itzayana Pineda Zamudio">Itzayana Pineda Zamudio</option>
                             <option value="Quetzalli Alcantar Cruz">Quetzalli Alcantar Cruz</option>
                             <option value="Karen Daniela García García">Karen Daniela García García</option>
+                            <option value="Brenda Adriana Juárez">Brenda Adriana Juárez</option>
                             </select>
                             </div>    
                             <div class="form-group">
@@ -119,10 +120,10 @@
                             <label>Notas</label>
                             <input id="Notas" type="text" class="form-control">
                             </div>
-                           <!-- <div class="form-group">
+                           <!--- <div class="form-group">
                             <label>Comprobante</label>
                             <input id="Comprobante" type="url" class="form-control" required>
-                            </div> -->                                       
+                            </div> -->                                      
                             </div>
                             <section class="modal-footer">
                         <div class="edit">
@@ -134,6 +135,57 @@
             </div>
         </div>
         </div>
+    </section>
+    <!---MODAL CON PROBANTES--->
+    <section>
+        <div class="comprobantes modal fade" id="modalDownload" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="comprobantes-dialog modal-dialog">
+              <div class="comprobantes-content modal-content">
+                <div class="comprobantes-header modal-header">
+                  <h5 class="comprobantes-title modal-title" id="staticBackdropLabel">Comprobantes</h5>
+                </div>
+                <div class="comprobantes-body modal-body">
+                    <div>
+                        <p>Aquí solo se mostraran los comprobantes de los municipios que ya hayan realizado el deposito de las pulseras vendidas que se reflejan en la base de datos.</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <h4>Acámbaro</h1>
+                        <a href="./comprobantes/Acambaro.jpg" download="Acambaro-Comprobante-ENERO/OCTUBRE/2021"> <button  type="button" class="btn btn-outline-warning">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg></button> </a>
+                            <hr>
+                    </div>
+                   <!--- <div>
+                        <h4>Apaseo el Alto</h1>
+                        <a href="..." download="ApaseoElAlto-Comprobante-ENERO/OCTUBRE/2021"> <button  type="button" class="btn btn-outline-warning">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg></button> </a>
+                            <hr>
+                    </div> -->
+                   <!--- <div>
+                        <h4>Coroneo</h1>
+                        <a href="...." download="Coroneo-Comprobante-ENERO/OCTUBRE/2021"> <button  type="button" class="btn btn-outline-warning">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg></button> </a>
+                            <hr>
+                    </div> -->
+                    <div>
+                        <h4>Jerécuaro</h1>
+                        <a href="./comprobantes/Jerecuaro.jpg" download="Jerécuaro-Comprobante-ENERO/OCTUBRE/2021"> <button  type="button" class="btn btn-outline-warning">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg></button> </a>
+                            <hr>
+                    </div>
+                   <!--- <div>
+                        <h4>Tarandacuao</h1>
+                        <a href="..." download="Tarandacuao-Comprobante-ENERO/OCTUBRE/2021"> <button  type="button" class="btn btn-outline-warning">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg></button> </a>
+                            <hr>
+                    </div> -->
+                    <div>
+                        <h4>Tarimoro</h1>
+                        <a href="./comprobantes/Tarimoro.jpg" download="Tarimoro-Comprobante-ENERO/OCTUBRE/2021"> <button  type="button" class="btn btn-outline-warning">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg></button> </a>
+                            <hr>
+                    </div>
+                </div>
+                <div class="comprobantes-footer modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal" tabindex="1">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
     <!--- BASE DE DATOS --->
     <section class="Base_Datos">
@@ -151,7 +203,7 @@
                         <th>Periodo</th>
                         <th>Deposito realizado</th>    
                         <th>Notas</th>
-                       <!--- <th>Comprobante</th>  --->                                                            
+                     <!--- <th>Comprobante</th> -->                                                           
                         <th style= "color:#ff0000;">Acciones <svg style="position: absolute; margin:5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-diamond" viewBox="0 0 16 16">
                             <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
                             <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>

@@ -18,6 +18,7 @@ $(document).ready(function() {
     //creamos constantes para los iconos editar y borrar    
     const iconoEditar = '<svg class="bi bi-pencil-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/><path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/></svg>';
     const iconoBorrar = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>';
+    const inconoDownload = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"> <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>'
     var db = firebase.database();
     var Pulseras = db.ref().child("Pulseras");
          
@@ -33,17 +34,17 @@ $(document).ready(function() {
                     },
                     {
                         targets: -1,        
-                        defaultContent: "<div class='wrapper text-center'><div class='btn-group'><button class='btnEditar btn btn-primary' data-toggle='tooltip' title='Editar'>"+iconoEditar //+ "</button><button class='btn btn-success' data-toggle='tooltip' title='Descargar comprobante'> "+iconoBorrar+"</button></div></div>"
+                        defaultContent: "<div class='wrapper text-center'><div class='btn-group'><button class='btnEditar btn btn-primary' data-toggle='tooltip' title='Editar'>"+iconoEditar + "</button><button class='btnDownload btn btn-success' data-toggle='tooltip' title='editar'>"+inconoDownload+"</button>" //+ "</button><button class='btn btn-success' data-toggle='tooltip' title='Descargar comprobante'> "+iconoBorrar+"</button></div></div>"
                     }
                 ]	   
             });
 
     Pulseras.on("child_added", datos => {        
-    dataSet = [datos.key, datos.child("Nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante") */];
+    dataSet = [datos.key, datos.child("Nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /*  datos.child("Comprobante").val()*/];
         table.rows.add([dataSet]).draw();
     });
     Pulseras.on('child_changed', datos => {           
-        dataSet = [datos.key, datos.child("Nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante") */];
+        dataSet = [datos.key, datos.child("Nombre").val(), datos.child("Municipio").val(), datos.child("Pulceras_Sol").val(), datos.child("Pulceras_Ven").val(), datos.child("Fecha_Ent").val(), datos.child("Fecha_Dep").val(), datos.child("Periodo").val(),datos.child("Seleccion").val(), datos.child("Notas").val(), /* datos.child("Comprobante").val()*/];
         table.row(filaEditada).data(dataSet).draw();
     });
     Pulseras.on("child_removed", function() {
@@ -62,12 +63,12 @@ $(document).ready(function() {
         let Periodo = $.trim($('#Periodo').val()); 
         let Seleccion = $.trim($('#Seleccion').val());
         let Notas = $.trim($('#Notas').val());
-       /* let Comprobante = $.trim($('#Comprobante').val()); */                                                         
+       /* let Comprobante = $.trim($('#Comprobante').val()); */                                                   
         let idFirebase = id;        
         if (idFirebase == ''){                      
             idFirebase = Pulseras.push().key;
         };                
-        data = {Nombre:Nombre, Municipio:Municipio, Pulceras_Sol:Pulceras_Sol, Pulceras_Ven:Pulceras_Ven, Fecha_Ent:Fecha_Ent, Fecha_Dep:Fecha_Dep,Periodo:Periodo, Seleccion:Seleccion, Notas:Notas, /* Comprobante:Comprobante */ };             
+        data = {Nombre:Nombre, Municipio:Municipio, Pulceras_Sol:Pulceras_Sol, Pulceras_Ven:Pulceras_Ven, Fecha_Ent:Fecha_Ent, Fecha_Dep:Fecha_Dep,Periodo:Periodo, Seleccion:Seleccion, Notas:Notas, /* Comprobante:Comprobante */};             
         actualizacionData = {};
         actualizacionData[`/${idFirebase}`] = data;
         Pulseras.update(actualizacionData);
@@ -88,7 +89,7 @@ $(document).ready(function() {
         $('#Periodo').val('');
         $('#Seleccion').val('');    
         $('#Notas').val('');
-       /* $('#Comprobante').val(''); */              
+       /* $('#Comprobante').val('');   */       
         $("form").trigger("reset");
         $('#modalAltaEdicion').modal('show');
     });        
@@ -106,7 +107,7 @@ $(document).ready(function() {
         let Fecha_Dep = $(this).closest('tr').find('td:eq(5)').text(); 
         let Seleccion = $(this).closest('tr').find('td:eq(7)').text();
         let Notas = $(this).closest('tr').find('td:eq(8)').text();
-       /* let Comprobante = parseInt($(this).closest('tr').find('td:eq(9)').text()); */          
+       /* let Comprobante = $(this).closest('tr').find('td:eq(9)').text(); */    
         $('#id').val(id);        
         $('#Nombre').val(Nombre);
         $('#Municipio').val(Municipio);                
@@ -117,7 +118,7 @@ $(document).ready(function() {
         $('#Periodo').val("Enero - Octubre - 2021");
         $('#Seleccion').val(Seleccion);
         $('#Notas').val(Notas);
-       /* $('#Comprobante').val(Comprobante); */                          
+       /* $('#Comprobante').val(Comprobante); */           
         $('#modalAltaEdicion').modal('show');
 	});  
   
@@ -139,6 +140,10 @@ $(document).ready(function() {
             Swal.fire('¡Eliminado!', 'El producto ha sido eliminado.','success')
         }
         })        
+	});  
+
+    $("#TablaPulseras").on("click", ".btnDownload", function() {                         
+        $('#modalDownload').modal('show');
 	});  
 
 });
